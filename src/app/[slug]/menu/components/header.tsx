@@ -11,7 +11,6 @@ interface HeaderProps{
 
 export const Header = ({restaurant}:HeaderProps) => {
   const {back} = useRouter();
-
   return(
   <div className="relative h-[270px] w-full">
     <Button variant="secondary" size="icon" onClick={back} 
