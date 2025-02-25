@@ -12,7 +12,7 @@ interface ProductHeaderProps {
 export const ProductsHeader = ({products}:ProductHeaderProps) => {
   const {back} = useRouter()
   return(
-    <div className="relative w-full h-[332px] ">
+    <div className="relative w-full min-h-[332px] ">
     <Button variant="secondary" size="icon" onClick={back}
         className="absolute top-4 left-4 rounded-full z-50">
         <ChevronLeftIcon size={24} />
