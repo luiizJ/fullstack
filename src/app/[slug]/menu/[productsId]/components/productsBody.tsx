@@ -21,11 +21,15 @@ interface ProductsBodyProps {
 }
 
 export const ProductsBody = ({products}: ProductsBodyProps) => {
-  const {toggleCart} = useContext(CartContext);
+  const {toggleCart, addProduct} = useContext(CartContext);
   const [quantity, setQuantity] = useState<number>(1);
   const handleIncrement = () => setQuantity(quantity + 1);
   const handleDecrement = () => setQuantity(prev => Math.max(1, prev - 1));
   const handleAddToCart = ()=>{
+    addProduct({
+      ...products,
+      quantity
+    })
     toggleCart();
   }
   return(
